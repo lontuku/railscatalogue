@@ -1,0 +1,14 @@
+<div class="container">
+<h1>Hecho A Mano</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<% @stores.each do |s|  %>
+<% if s.suspended == 0 %>
+    <p> <%= s.name %> </p>
+    <div>
+    <% s.images.each do |image| %>
+    <%= image_tag image, width:'100px', height:'100px' %>
+    <% end %>
+    </div>
+    <% end %>
+<% end %>
+</div>

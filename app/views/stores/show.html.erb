@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Estado de la tienda:</strong>
+  <% if @store.suspended == 0 %>
+    <%= p "ACTIVA" %>
+  <%  elsif @store.suspended == 1 %>
+    <%= p "SUSPENDIDA" %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @store.name %>
+</p>
+
+<p>
+  <strong>Instagram link:</strong>
+  <%= @store.instagram_link %>
+</p>
+
+<p>
+  <strong>Items:</strong>
+  <% if !@store.items.empty? %>
+    <% items = @store.items.map(&:name) %>
+    <%= items.map(&:capitalize).join(', ')%>.
+  <% else %>
+    No existen items aún.
+  <% end %>
+</p>
+
+<% @store.images.first %>
+<div style="width:400px; height: auto">
+  <% @store.images.each do |image| %>
+  <%= image_tag(image), id: 'store_pic' %>
+  <% end %>
+</div>
+
+<p>
+  <strong>User:</strong>
+  <%= @store.user.nick %>
+</p>
+
+<%= link_to 'Edit', edit_store_path(@store) %> |
+<%= link_to 'Back', stores_path %>
