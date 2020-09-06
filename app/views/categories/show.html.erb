@@ -5,5 +5,16 @@
   <%= @category.name %>
 </p>
 
+<p>
+<% if !@category.stores.empty? %>
+  <% @category.stores.each do |s| %>
+  <%= s.name %>
+  De Usuario: <%= s.user.name %>
+  <% end %>
+<% else %>
+<h3>Aún no existen tiendas en esta categoría.</h3>
+<% end %>
+</p>
+
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

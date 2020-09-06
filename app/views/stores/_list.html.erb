@@ -1,0 +1,22 @@
+ <% @stores.each do |store| %>
+      <tr>
+        <td><%= store.name %></td>
+        <td><%= store.instagram_link %></td>
+        <td><%= store.user.nick %></td>
+        <td>
+          <button class="btn-change-state btn-info" data-id="<%= store.id %>">
+          <%= store.suspended == 1 ? 'Aprobar' : 'Suspender' %>
+          </button>
+        </td>
+
+
+        <%#= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+        <%#= link_to 'Comprar', store_path(store, name:"hola"), method: :patch, remote: true %>
+ 
+        <td><%= link_to 'Show', store %></td>
+        <td><%= link_to 'Edit', edit_store_path(store) %></td>
+        <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+

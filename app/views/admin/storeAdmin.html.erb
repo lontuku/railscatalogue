@@ -1,0 +1,17 @@
+<div class="container">
+<h1>Administrar Tiendas</h1>
+<p>Find me in app/views/admin/storeAdmin.html.erb</p>
+
+<% @stores.each do |s|  %>
+    <p> <%= s.name %> </p>
+    <div>
+    <% s.images.each do |image| %>
+    <%= image_tag image, width:'100px', height:'100px' %>
+    <% end %>
+    </div>
+<% end %>
+<%= button_to "store/New", action: "edit" %>
+<form method="post" action="/store/edit" class="button_to">
+<input value="New" type="submit" />
+</form>"
+</div>

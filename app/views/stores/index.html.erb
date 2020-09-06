@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<h1>Categorías</h1>
+<% @categories.each do |c| %>
+  <%= link_to c.name, stores_path(:categ => c.id) %> 
+<% end %>
 <h1>Stores</h1>
 
 <table>
@@ -12,17 +15,8 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @stores.each do |store| %>
-      <tr>
-        <td><%= store.name %></td>
-        <td><%= store.instagram_link %></td>
-        <td><%= store.user.nick %></td>
-        <td><%= link_to 'Show', store %></td>
-        <td><%= link_to 'Edit', edit_store_path(store) %></td>
-        <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  <tbody id="listatiendas">
+   <%= render 'list', stores: @stores %>
   </tbody>
 </table>
 

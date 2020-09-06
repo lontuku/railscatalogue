@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<h1>Categoría: <%= @store.category.try(:name) %></h1>
 <p>
   <strong>Estado de la tienda:</strong>
   <% if @store.suspended == 0 %>
@@ -32,9 +32,11 @@
 <% @store.images.first %>
 <div style="width:400px; height: auto">
   <% @store.images.each do |image| %>
-  <%= image_tag(image), id: 'store_pic' %>
+  <%= image_tag(image) %>
   <% end %>
 </div>
+
+
 
 <p>
   <strong>User:</strong>
