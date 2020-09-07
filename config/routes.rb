@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :items
   resources :reviews
   resources :stores do
+    resources :likes
     member do
       patch 'toggle_state' 
     end 

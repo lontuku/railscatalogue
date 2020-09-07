@@ -1,0 +1,9 @@
+ <%= store.likes.count if store.likes.count > 0 %>
+<% if store.likes.count == 0 %>
+    <%= link_to 'Like', store_likes_path(store), method: :post, remote: true, class: "btn btn-outline-danger btn-sm"  %>
+<% else %>
+    <% old_like = store.likes.find_by(user_id: current_user) %>
+  
+   <%= fa_icon "heart",class: 'mx-2', size: '3x' %><%= link_to 'Quitar', store_like_path(store, old_like), method: :delete,remote: true, class: "btn btn-outline-secondary btn-sm"  %></p>
+<% end %>
+

@@ -6,6 +6,7 @@
   <%= link_to c.name, root_path(:categ => c.id) %> 
 <% end %>
 <p>Find me in app/views/home/index.html.erb</p>
+
 <% @stores.each do |s|  %>
 <% if s.suspended == 0 %>
     <p> <br> <b> <%= s.name %></b> <br> </p>
@@ -14,6 +15,9 @@
     <%= image_tag image, width:'100px', height:'100px' %>
     <% end %>
    <p> <%= s.instagram_link  %> </p>
+   <div id="parcial_likes_<%=s.id%>"> <%= render 'parcial_likes', store: s %> 
+   <%#= link_to 'Like', store_likes_path(s), method: :post, remote: true, class: "btn btn-info"  %>
+   </div>
     </div>
     <% end %>
 <% end %>

@@ -8,6 +8,7 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 gem 'cancancan'
 gem 'toastr-rails'
 gem 'omniauth-facebook'
+gem "font-awesome-rails"
 
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'

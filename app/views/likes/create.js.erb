@@ -1,0 +1,2 @@
+//alert ("llega al js");
+$("#parcial_likes_<%=@store_id%>").html("<%= escape_javascript(render partial: 'home/parcial_likes', locals: { store: @store} ) %>")
