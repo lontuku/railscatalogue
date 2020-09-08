@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :categories
   resources :items
   resources :reviews
+  post 'indexup', to: 'instagram_api#indexup'
+  get 'ver', to: 'instagram_api#ver'
   resources :stores do
     resources :likes
     member do
