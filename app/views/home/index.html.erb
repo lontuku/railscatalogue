@@ -7,36 +7,34 @@
 <% end %>
 <p>Find me in app/views/home/index.html.erb</p>
 
+<div class="container">
+    <div class="row">
+        <% @stores.each do |s|  %>
 
-
-<% @stores.each do |s|  %>
-<% if s.suspended == 0 %>
-    <p> <br> <b> <%= s.name %></b> <br> </p>
-    <div>
-    <% s.images.each do |image| %>
-    <%= image_tag image, width:'100px', height:'100px' %>
-    <% end %>
-   <p> <%= s.instagram_link  %> </p>
-   <div id="parcial_likes_<%=s.id%>"> <%= render 'parcial_likes', store: s %> 
-   <%#= link_to 'Like', store_likes_path(s), method: :post, remote: true, class: "btn btn-info"  %>
-   </div>
+            <% if s.suspended == 0 %>
+        <div class="col-md-4">
+            <div class="card mt-3 shadow-lg p-3 mb-5 bg-white rounded">
+            <% s.images.each.with_index do |image, i| %>
+                       <% if i < 1 %> 
+                            <%= image_tag image, width:'100px', height:'100px', class: "card-img-top img-fluid" %>
+                        <% end %>
+            <% end %>
+                <div class="card-header">
+                    <h5> <%= s.name %> </h5>
+                </div>
+                <div class="card-body">
+                    body
+                </div>
+                <div class="card-footer text-muted">
+                     <div id="parcial_likes_<%=s.id%>"> 
+                            <p><%= render 'parcial_likes', store: s %> </p>
+                    </div>
+                    <% name = s.user.try(:name) %>
+                    Tienda de: <%= link_to name, s.instagram_link %>
+                </div>
+            </div>
+        </div>
+            <% end %>
+        <% end %>
     </div>
-    <% end %>
-<% end %>
 </div>
-  <style> 
-        .card { 
-            width: 20rem; 
-            margin: 2rem; 
-        } 
-          
-        .image-grid-container { 
-            display: grid; 
-      
-            /* For 2 columns */ 
-            grid-template-columns: auto auto; 
-        } 
-        img { 
-            width: 100%; 
-        } 
-    </style> 

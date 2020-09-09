@@ -1,4 +1,5 @@
-$(document).on('turbolinks:load', function () {
+$(document).ready(function (){
+//$(document).on('turbolinks:load', function () {
     $('.btn-change-state').click(function(){
         const btn = $(this)
         let storeId = btn.data('id')
@@ -18,3 +19,4 @@ $(document).on('turbolinks:load', function () {
         
     })    
 })
+

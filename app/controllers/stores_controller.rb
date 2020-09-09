@@ -1,8 +1,8 @@
 class StoresController < ApplicationController
-  #before_action :set_store, only: [:show, :edit, :update, :destroy, :toggle_state]
+  before_action :set_store, only: [:show, :edit, :update, :destroy, :toggle_state]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update]
-  load_resource
-  authorize_resource
+  #oad_resource
+  #authorize_resource
   # GET /stores
   # GET /stores.json
   def index
@@ -68,6 +68,7 @@ class StoresController < ApplicationController
   end
 
   def toggle_state
+  
     new_state = @store.suspended == 1 ? 0 : 1
     new_text = new_state == 1 ? 'Aprobar' : 'Suspender'
     @store.update(suspended: new_state)
