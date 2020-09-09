@@ -12,6 +12,7 @@ gem "font-awesome-rails"
 gem 'rack-cors'
 gem 'rest-client', '~> 2.1'
 gem 'jquery-rails'
+gem 'cloudinary'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'

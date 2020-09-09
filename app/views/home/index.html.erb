@@ -16,7 +16,8 @@
             <div class="card mt-3 shadow-lg p-3 mb-5 bg-white rounded">
             <% s.images.each.with_index do |image, i| %>
                        <% if i < 1 %> 
-                            <%= image_tag image, width:'100px', height:'100px', class: "card-img-top img-fluid" %>
+                        <%= cl_image_tag(image.key, width: 300, crop: :scale,class: "card-img-top img-fluid")  %>
+                            <%#= image_tag image, width:'100px', height:'100px', class: "card-img-top img-fluid" %>
                         <% end %>
             <% end %>
                 <div class="card-header">

@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dtwrm4vp1
+  api_key: '911765395274513'
+  api_secret: pEn1uB0AIU9hWaYl5Smy5U6F0m0
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dtwrm4vp1
+  api_key: '911765395274513'
+  api_secret: pEn1uB0AIU9hWaYl5Smy5U6F0m0
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dtwrm4vp1
+  api_key: '911765395274513'
+  api_secret: pEn1uB0AIU9hWaYl5Smy5U6F0m0
+  enhance_image_tag: true
+  static_file_support: false
