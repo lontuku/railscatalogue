@@ -11,6 +11,7 @@ gem 'omniauth-facebook'
 gem "font-awesome-rails"
 gem 'rack-cors'
 gem 'rest-client', '~> 2.1'
+gem 'jquery-rails'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
