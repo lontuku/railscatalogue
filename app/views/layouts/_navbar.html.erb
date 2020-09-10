@@ -20,6 +20,9 @@
       <div class="btn-group mr-2" role="group" aria-label="First group">
       <%= link_to "Editar Perfil", edit_user_registration_path, class:"btn btn-secondary", type:"button" %>
       <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"btn btn-info", type:"button" %>
+       <li class="nav-item">
+        <%= link_to 'WebStats', home_stats_path, class:"btn btn-dark"  %>
+        </li>
        </div> 
       <% else %>
         <li class="nav-item">

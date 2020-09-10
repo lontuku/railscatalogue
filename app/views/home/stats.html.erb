@@ -1,7 +1,9 @@
 <div class="container">
 <h1 class="display-4">Análisis De Datos</h1>
-
+<hr>
+<h1>Distribución de categorías</h1>
 <%=  pie_chart Category.joins(:stores).group('name').count, label: "Cantidad"  %>
+<hr>
+<h1>Promedio de likes por post de cada tienda</h1>
 <%= bar_chart Store.group(:name).sum(:instagram_like_avg) %>
-<%= column_chart Store.group(:category).sum(:instagram_follower_total)%>
 </div>
