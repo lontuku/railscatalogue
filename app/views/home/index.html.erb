@@ -10,6 +10,7 @@
 <div class="container">
     <div class="row">
     <%=  pie_chart Category.joins(:stores).group('name').count, label: "Cantidad"  %>
+    
         <% @stores.each do |s|  %>
 
             <% if s.suspended == 0 %>
