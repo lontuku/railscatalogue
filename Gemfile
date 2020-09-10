@@ -17,6 +17,7 @@ gem 'rails_admin', '~> 2.0'
 gem "chartkick"
 gem 'highcharts-rails'
 gem 'groupdate'
+gem 'ransack'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server

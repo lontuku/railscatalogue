@@ -8,7 +8,7 @@
 
 # arr = ["palosanto_", "ciervadesign", "_chomba", "loretocorreadiseno", "108label", "bethchile", "camisetaskuku", "_vittorio_rosso", "indomitagrafica", "veta.serigrafia", "lo.lisaolave", "la.pava", "dilema.cl", "paulamar.cl", "trinidadestudio", "jovivestuario", "anaranja.prendas", "andreadelahorrasastre", "siempre.oveja", "relmu_tejidos", "nal.knits", "lanitas_coloradas", "tune.yarns", "eter.clothing", "artificiozerodesecho", "nd_denim", "freckle_and_fox", "deshojandohilo"]
 
-arr = [{:name=>"artesaniasdechile", :total_post=>775, :total_follower=>775, :total_following=>1988, :avg=>441}, {:name=>"cordillerana", :total_post=>222, :total_follower=>222, :total_following=>851, :avg=>135}, {:name=>"mercadodeoficioschile", :total_post=>698, :total_follower=>698, :total_following=>467, :avg=>192}, {:name=>"trihue_noblemadera", :total_post=>178, :total_follower=>178, :total_following=>1693, :avg=>249}, {:name=>"kumen.chile", :total_post=>670, :total_follower=>670, :total_following=>1677, :avg=>696}]
+arr = [{:name=>"cerio.cl", :total_post=>1309, :total_follower=>1309, :total_following=>998, :avg=>240}, {:name=>"therats_atelier", :total_post=>128, :total_follower=>128, :total_following=>189, :avg=>28}, {:name=>"1109concept", :total_post=>111, :total_follower=>111, :total_following=>115, :avg=>198}, {:name=>"yavalladiseno", :total_post=>2339, :total_follower=>2339, :total_following=>2228, :avg=>67}, {:name=>"la_marea_macrame", :total_post=>0, :total_follower=>0, :total_following=>3498, :avg=>714}, {:name=>"deconmiis", :total_post=>118, :total_follower=>118, :total_following=>198, :avg=>45}, {:name=>"filodendro__", :total_post=>518, :total_follower=>518, :total_following=>2287, :avg=>360}, {:name=>"amarantafloral.cl", :total_post=>101, :total_follower=>101, :total_following=>1910, :avg=>122}, {:name=>"nicle.cl", :total_post=>197, :total_follower=>197, :total_following=>1322, :avg=>60}, {:name=>"telaria", :total_post=>887, :total_follower=>887, :total_following=>3024, :avg=>61}]
 
 arr.each do |h|
     nombre = h[:name]
@@ -16,7 +16,7 @@ arr.each do |h|
         name: "#{nombre}",
         instagram_link: "https://www.instagram.com/#{nombre}",
         user_id: 2,
-        category_id: 5,
+        category_id: 6,
         instagram_like_avg: h[:avg],
         instagram_follower_total: h[:total_follower],
         instagram_post_total: h[:total_post],
