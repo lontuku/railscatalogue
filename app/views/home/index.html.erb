@@ -13,14 +13,12 @@
 
             <% if s.suspended == 0 %>
             
-        <div class="col-md-4">+
-            <% if s.instagram_change !=nil %>
+        <div class="col-md-4">
                 <% if s.instagram_change == true %>
                 <div class="card mt-3 shadow-lg p-3 mb-5 bg-info rounded">
                 <% else %>
                 <div class="card mt-3 shadow-lg p-3 mb-5 bg-white rounded">
                 <% end %>
-            <% end %>
             <% s.images.each.with_index do |image, i| %>
                        <% if i < 1 %> 
                         <%= cl_image_tag(image.key, width: 300, crop: :scale,class: "card-img-top img-fluid")  %>
