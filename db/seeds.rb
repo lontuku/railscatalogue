@@ -8,7 +8,7 @@
 
 # arr = ["palosanto_", "ciervadesign", "_chomba", "loretocorreadiseno", "108label", "bethchile", "camisetaskuku", "_vittorio_rosso", "indomitagrafica", "veta.serigrafia", "lo.lisaolave", "la.pava", "dilema.cl", "paulamar.cl", "trinidadestudio", "jovivestuario", "anaranja.prendas", "andreadelahorrasastre", "siempre.oveja", "relmu_tejidos", "nal.knits", "lanitas_coloradas", "tune.yarns", "eter.clothing", "artificiozerodesecho", "nd_denim", "freckle_and_fox", "deshojandohilo"]
 
-arr = [{:name=>"cerio.cl", :total_post=>1309, :total_follower=>1309, :total_following=>998, :avg=>240}, {:name=>"therats_atelier", :total_post=>128, :total_follower=>128, :total_following=>189, :avg=>28}, {:name=>"1109concept", :total_post=>111, :total_follower=>111, :total_following=>115, :avg=>198}, {:name=>"yavalladiseno", :total_post=>2339, :total_follower=>2339, :total_following=>2228, :avg=>67}, {:name=>"la_marea_macrame", :total_post=>0, :total_follower=>0, :total_following=>3498, :avg=>714}, {:name=>"deconmiis", :total_post=>118, :total_follower=>118, :total_following=>198, :avg=>45}, {:name=>"filodendro__", :total_post=>518, :total_follower=>518, :total_following=>2287, :avg=>360}, {:name=>"amarantafloral.cl", :total_post=>101, :total_follower=>101, :total_following=>1910, :avg=>122}, {:name=>"nicle.cl", :total_post=>197, :total_follower=>197, :total_following=>1322, :avg=>60}, {:name=>"telaria", :total_post=>887, :total_follower=>887, :total_following=>3024, :avg=>61}]
+arr = [{:name=>"numun_", :total_post=>92, :total_follower=>92, :total_following=>1061, :avg=>65}, {:name=>"brumanativa", :total_post=>83, :total_follower=>83, :total_following=>1196, :avg=>198}, {:name=>"perfumeriabotanica", :total_post=>434, :total_follower=>434, :total_following=>1601, :avg=>248}]
 
 arr.each do |h|
     nombre = h[:name]
@@ -16,7 +16,7 @@ arr.each do |h|
         name: "#{nombre}",
         instagram_link: "https://www.instagram.com/#{nombre}",
         user_id: 2,
-        category_id: 6,
+        category_id: 7,
         instagram_like_avg: h[:avg],
         instagram_follower_total: h[:total_follower],
         instagram_post_total: h[:total_post],
