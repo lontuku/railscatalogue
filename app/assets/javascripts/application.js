@@ -13,6 +13,8 @@
 //= require rails-ujs
 //= require jquery
 //= require toastr
+//= require highcharts
+//= require chartkick
 //= require bootstrap
 //= require activestorage
 //= require_tree .

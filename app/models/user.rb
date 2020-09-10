@@ -9,6 +9,13 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :likes, dependent: :destroy
 
+  enum role: [:admin, :visit]
+
+  # after_create :send_admin_mail
+  # def send_admin_mail
+  #   UserMailer.send_welcome_email(self).deliver_later
+  # end
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
