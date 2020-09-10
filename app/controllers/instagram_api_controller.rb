@@ -11,12 +11,12 @@ class InstagramApiController < ActionController::API
         name = params[:name]
         @store = Store.find_by(name: name)
         
-        link = params[:instagram_link] 
-        u = params[:user_id]
-        cat = params[:category_id]
-    
+        #instagram_change = params[:instagram_change] 
+        # u = params[:user_id]
+        # cat = params[:category_id]
+        
         #@store = Store.create!(name: name, instagram_link: link, user_id: u, category_id: cat)
-        @store.update(instagram_link: link)
+        @store.update(:instagram_change => true)
 
         #@store = Store.create!(params)
         
