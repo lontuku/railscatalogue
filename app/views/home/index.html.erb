@@ -1,8 +1,10 @@
 <div class="container">
 <h1>Categorías</h1>
 <%= link_to 'Todas', root_path %>
+
 <% @categories.each do |c| %>
   <%= link_to c.name, root_path(:categ => c.id) %> 
+  <span class="badge badge-primary badge-pill"> <%= c.stores.count %> </span>
 <% end %>
 
 <div class="container">
@@ -10,8 +12,13 @@
         <% @stores.each do |s|  %>
 
             <% if s.suspended == 0 %>
+            
         <div class="col-md-4">
+            <% if s.instagram_change != nil && true %>
+            <div class="card mt-3 shadow-lg p-3 mb-5 bg-info rounded">
+            <% else %>
             <div class="card mt-3 shadow-lg p-3 mb-5 bg-white rounded">
+            <% end %>
             <% s.images.each.with_index do |image, i| %>
                        <% if i < 1 %> 
                         <%= cl_image_tag(image.key, width: 300, crop: :scale,class: "card-img-top img-fluid")  %>
@@ -20,16 +27,25 @@
             <% end %>
                 <div class="card-header">
                     <h5> <%= s.name %> </h5>
+                    <h5> <%= link_to "Revisar", s.instagram_link %> </h5>
+                    
+                    
                 </div>
                 <div class="card-body">
-                    body
+                <button type="button" class="btn btn-dark">
+                Seguidores en Instagram <span class="badge badge-light"><%= s.instagram_follower_total %></span>
+                </button>
+                    <hr>
+                <button type="button" class="btn btn-dark">
+                Promedio de Likes x Post <span class="badge badge-light"><%= s.instagram_like_avg %></span>
+                </button>
                 </div>
                 <div class="card-footer text-muted">
                      <div id="parcial_likes_<%=s.id%>"> 
                             <p><%= render 'parcial_likes', store: s %> </p>
                     </div>
-                    <% name = s.user.try(:name) %>
-                    Tienda de: <%= link_to name, s.instagram_link %>
+                    <%# name = s.user.try(:name) %>
+                     
                 </div>
             </div>
         </div>

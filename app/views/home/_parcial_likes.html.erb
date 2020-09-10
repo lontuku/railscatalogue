@@ -5,11 +5,11 @@
 <% if current_user != nil %>
     <% if current_user.likes.find_by(store_id: store)!= nil %>
         <% old_like = store.likes.find_by(user_id: current_user) %>
-        <%= link_to 'Quitar', store_like_path(store, old_like), method: :delete,remote: true, class: "btn btn-outline-secondary btn-sm"  %></p>
+        <%= link_to 'Quitar', store_like_path(store, old_like), method: :delete,remote: true, class: "btn btn-outline-secondary "  %></p>
     <% else %>
-         <%= link_to 'Like', store_likes_path(store), method: :post, remote: true, class: "btn btn-outline-danger btn-sm"  %>
+         <%= link_to 'Like', store_likes_path(store), method: :post, remote: true, class: "btn btn-outline-danger "  %>
     <% end %>
 <% else %>
-       <%= link_to 'Like', new_user_registration_path,class: "btn btn-outline-danger btn-sm"  %>
+       <%= link_to 'Like', new_user_registration_path,class: "btn btn-outline-danger "  %>
 <% end %>
 
