@@ -8,7 +8,7 @@
 
 # arr = ["palosanto_", "ciervadesign", "_chomba", "loretocorreadiseno", "108label", "bethchile", "camisetaskuku", "_vittorio_rosso", "indomitagrafica", "veta.serigrafia", "lo.lisaolave", "la.pava", "dilema.cl", "paulamar.cl", "trinidadestudio", "jovivestuario", "anaranja.prendas", "andreadelahorrasastre", "siempre.oveja", "relmu_tejidos", "nal.knits", "lanitas_coloradas", "tune.yarns", "eter.clothing", "artificiozerodesecho", "nd_denim", "freckle_and_fox", "deshojandohilo"]
 
-arr = [{:name=>"carmela_chile", :total_post=>439, :total_follower=>439, :total_following=>590, :avg=>97}, {:name=>"gioiacalzado", :total_post=>135, :total_follower=>135, :total_following=>1933, :avg=>61}, {:name=>"la.sebastiana", :total_post=>954, :total_follower=>954, :total_following=>3194, :avg=>256}, {:name=>"losjosefinas", :total_post=>515, :total_follower=>515, :total_following=>1518, :avg=>502}, {:name=>"lupinos.calzados", :total_post=>101, :total_follower=>101, :total_following=>669, :avg=>58}, {:name=>"rocioshoescalzado", :total_post=>81, :total_follower=>81, :total_following=>1096, :avg=>212}]
+arr = [{:name=>"artesaniasdechile", :total_post=>775, :total_follower=>775, :total_following=>1988, :avg=>441}, {:name=>"cordillerana", :total_post=>222, :total_follower=>222, :total_following=>851, :avg=>135}, {:name=>"mercadodeoficioschile", :total_post=>698, :total_follower=>698, :total_following=>467, :avg=>192}, {:name=>"trihue_noblemadera", :total_post=>178, :total_follower=>178, :total_following=>1693, :avg=>249}, {:name=>"kumen.chile", :total_post=>670, :total_follower=>670, :total_following=>1677, :avg=>696}]
 
 arr.each do |h|
     nombre = h[:name]
@@ -16,7 +16,7 @@ arr.each do |h|
         name: "#{nombre}",
         instagram_link: "https://www.instagram.com/#{nombre}",
         user_id: 2,
-        category_id: 4,
+        category_id: 5,
         instagram_like_avg: h[:avg],
         instagram_follower_total: h[:total_follower],
         instagram_post_total: h[:total_post],
