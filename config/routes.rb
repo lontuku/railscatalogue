@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'admin/storeAdmin'
   get 'home/index'
+  get 'home/stats'
   resources :categories
   resources :items
   resources :reviews

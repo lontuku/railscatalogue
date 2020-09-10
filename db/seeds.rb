@@ -15,8 +15,8 @@ arr.each do |h|
     s = Store.create!(
         name: "#{nombre}",
         instagram_link: "https://www.instagram.com/#{nombre}",
-        user_id: 2,
-        category_id: 11,
+        user_id: 10,
+        category_id: 4,
         instagram_like_avg: h[:avg],
         instagram_follower_total: h[:total_follower],
         instagram_post_total: h[:total_post],

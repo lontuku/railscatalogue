@@ -11,5 +11,8 @@ class HomeController < ApplicationController
     else
       @stores = Store.by_id
     end
+
+    def stats
+    end 
   end
 end
