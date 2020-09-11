@@ -1,24 +1,52 @@
-# README
+# Hecho A Mano
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Es una aplicación Rails, que genera un catálago en base a datos obtenidos desde Instagram.
 
-Things you may want to cover:
+Puedes visitar la versión online en [HAM](https://evening-everglades-77037.herokuapp.com/)
 
-* Ruby version
+### Screenshots
 
-* System dependencies
+![Landing](https://i.ibb.co/wc8n6sH/Captura-de-pantalla-2020-09-11-a-la-s-18-04-19.png "Optional title")
 
-* Configuration
+![Principal](https://i.ibb.co/mcmyt9g/Captura-de-pantalla-2020-09-11-a-la-s-18-05-20.png
+ "Optional title")
 
-* Database creation
+### Características y Gemas
 
-* Database initialization
+- La información es obtenida desde instagram.
+- ActiveStorage manejo de imágenes.
+- Rails Admin para administración.
+- Facebook Login.
+- CanCanCan
+- font-awesome-rails
+- cloudinary
+- chartkick
+- bootstrap
 
-* How to run the test suite
+### Requisitos
 
-* Services (job queues, cache servers, search engines, etc.)
+Los requisitos mínimos para ejecutar el proyecto son
 
-* Deployment instructions
+- Ruby 2.6.3
+- Rails 5.2.4
+  
+### 1. Descargar repositorio
 
-* ...
+```bash
+git clone git@github.com:lontuku/railscatalogue.git
+```
+
+### 2. Crear la base de datos y correr migraciones
+
+```ruby
+rails db:create
+rails db:migrate
+```
+
+### 3. Levantar el servidor
+
+```ruby
+rails s
+```
+
+Acceder al sitio en http://localhost:3000
