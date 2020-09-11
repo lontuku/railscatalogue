@@ -11,8 +11,10 @@
   </head>
 
   <body>
-    <% if !current_page?(root_path) %>
-     <%= render 'layouts/navbar' %>
+    <% if current_page?(root_path) || current_page?(new_user_registration_path) %>
+     
+    <% else %>
+    <%= render 'layouts/navbar' %>
      <% end %>
  <div class="container">
       <% unless flash.empty? %>
