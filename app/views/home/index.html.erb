@@ -4,9 +4,14 @@
 
 <% @categories.each do |c| %>
   <%= link_to c.name, home_index_path(:categ => c.id) %> 
-  <span class="badge badge-primary badge-pill"> <%= c.stores.count %> </span>
+  <% store_real = [] %>
+  <% c.stores.each do |s| %>
+    <% if s.suspended == 0 %>
+        <% store_real << s %>
+    <% end %>
 <% end %>
-
+  <span class="badge badge-primary badge-pill"> <%= store_real.count %> </span>
+<% end %>
 <div class="container">
     <div class="row">
         <% @stores.each do |s|  %>
