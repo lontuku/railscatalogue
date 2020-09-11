@@ -1,6 +1,6 @@
 class StoresController < ApplicationController
   before_action :set_store, only: [:show, :edit, :update, :destroy, :toggle_state]
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+  before_action :authenticate_user!
   #oad_resource
   #authorize_resource
   # GET /stores
