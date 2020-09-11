@@ -11,7 +11,9 @@
   </head>
 
   <body>
+    <% if !current_page?(root_path) %>
      <%= render 'layouts/navbar' %>
+     <% end %>
  <div class="container">
       <% unless flash.empty? %>
         <script type="text/javascript">

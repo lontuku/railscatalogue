@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+
     @user = current_user
     @stores = Store.all
 
@@ -18,10 +19,12 @@ class HomeController < ApplicationController
     else 
      @stores = Store.by_id
     end
-
-    def stats
-    end 
-
     
+  end
+
+  def landing
+    if signed_in?
+      redirect_to home_index_path
+    end
   end
 end
