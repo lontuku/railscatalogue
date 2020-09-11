@@ -3,7 +3,7 @@
 <%= link_to 'Todas', root_path %>
 
 <% @categories.each do |c| %>
-  <%= link_to c.name, root_path(:categ => c.id) %> 
+  <%= link_to c.name, home_index_path(:categ => c.id) %> 
   <span class="badge badge-primary badge-pill"> <%= c.stores.count %> </span>
 <% end %>
 

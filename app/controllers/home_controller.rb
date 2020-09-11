@@ -21,10 +21,14 @@ class HomeController < ApplicationController
     end
     
   end
-
   def landing
+
     if signed_in?
-      redirect_to home_index_path
+        redirect_to home_index_path
     end
+  
   end
+
+
+    
 end
